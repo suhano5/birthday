@@ -32,8 +32,16 @@
 
 <body>
 	<div class="loading"></div>
-	<audio class="song" controls loop>
-        <source src="hbd.mp3"></source>
+	<audio class="song" controls loop autoplay>
+  <source src="birthday.mp3" type="audio/mpeg">
+		<script>
+  document.addEventListener("click", function() {
+    var audio = document.getElementById("song");
+    if (audio.paused) {
+      audio.play();
+    }
+  });
+</script>
 	   Your browser isn't invited for super fun audio time.
     </audio>
     <div class="balloons text-center" id="b1">
